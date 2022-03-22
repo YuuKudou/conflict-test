@@ -5,8 +5,25 @@ from flask import Flask, render_template, request
 def circle_input():
     return render_template("circle_input.html")
 
+
 @app.route("/circle_result")
 def circle_result():
     radius = int(request.args.get("radius"))
     result = 3.14 * radius ** 2
     return render_template("circle_resurt.html", result=result)
+
+if_name_ == "_name_":
+    app.run(debug=True)
+
+@app.route("/square_input")
+def square_input():
+    return render_template("square_input.html")
+
+@app.route("/squsre_result")
+def square_result():
+    height = int(request.args.get("height"))
+    bottom = int(request.args.get("bottom"))
+    result = height * bottom
+    return render_template("square_result.html",result=result)
+
+
