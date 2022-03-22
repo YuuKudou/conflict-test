@@ -8,3 +8,15 @@ def top_page():
 
 if_name_ == "_name_":
     app.run(debug=True)
+
+@app.route("/square_input")
+def square_input():
+    return render_template("square_input.html")
+
+@app.route("/squsre_result")
+def square_result():
+    height = int(request.args.get("height"))
+    bottom = int(request.args.get("bottom"))
+    result = height * bottom
+    return render_template("square_result.html",result=result)
+
